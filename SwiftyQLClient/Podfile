@@ -1,0 +1,18 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'SwiftyQL' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'RxSwift',    '~> 2.0'
+  pod 'RxCocoa',    '~> 2.0'
+  pod 'Moya/RxSwift'
+  pod 'Moya-ModelMapper/RxSwift'
+
+  target 'SwiftyQLTests' do
+    inherit! :search_paths
+    pod 'RxTests',    '~> 2.0'
+  end
+
+end
