@@ -15,14 +15,14 @@ Creates a new object with the given name and returns the object with its name an
 ```
 mutation createObjectWithName {createObject(name: "test"){name,id}}
 ```
-
+----
 **allObjects: Query**
 
 Returns all objects
 ```
 query allObjects {objects{name,id}}
 ```
-
+----
 **objectWithId: Query**
 
 Returns a specific object with a given id
