@@ -17,9 +17,10 @@ Next you can head to [localhost](localhost:8000) on port 8000 in your browser to
 ## Client
 
 Next you need to start the Swift client. This demo project makes use of some third party dependencies.
-1. RxSwift & RxCocoa
-2. Moya
-3. Moya-ModelMapper
+
+1. [RxSwift & RxCocoa](https://github.com/ReactiveX/RxSwift)
+2. [Moya](https://github.com/Moya/Moya)
+3. [Moya-ModelMapper](https://github.com/sunshinejr/Moya-ModelMapper)
 
 To install this dependencies you need to run cocoapods. If you are not familiar with this I recommend reading their [Getting Started](https://guides.cocoapods.org/using/getting-started.html) guide.
 
