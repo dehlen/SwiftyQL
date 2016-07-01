@@ -14,24 +14,24 @@ import Moya_ModelMapper
 struct APIProvider {
     let provider: RxMoyaProvider<APIEndpoint>
     
-    func allObjects() -> Observable<[Object]> {
+    func allMovies() -> Observable<[Movie]> {
         return self.provider
-            .request(APIEndpoint.AllObjects)
+            .request(APIEndpoint.AllMovies)
             .debug()
-            .mapArray(Object.self, keyPath: "data.objects")
+            .mapArray(Movie.self, keyPath: "data.movies")
     }
     
-    func objectWithId(id: String) -> Observable<Object> {
+    func movieWithId(id: String) -> Observable<Movie> {
         return self.provider
-            .request(APIEndpoint.ObjectWithId(id: id))
+            .request(APIEndpoint.MovieWithId(id: id))
             .debug()
-            .mapObject(Object.self, keyPath: "data.object")
+            .mapObject(Movie.self, keyPath: "data.movie")
     }
     
-    func createObjectWithName(name: String) -> Observable<Object> {
+    func createMovieWithName(name: String) -> Observable<Movie> {
         return self.provider
-            .request(APIEndpoint.CreateObjectWithName(name: name))
+            .request(APIEndpoint.CreateMovieWithName(name: name))
             .debug()
-            .mapObject(Object.self, keyPath: "data.createObject")
+            .mapObject(Movie.self, keyPath: "data.createMovie")
     }
 }

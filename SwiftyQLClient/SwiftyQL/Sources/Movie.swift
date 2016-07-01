@@ -1,5 +1,5 @@
 //
-//  Object.swift
+//  Movie.swift
 //  SwiftyQL
 //
 //  Created by David Ehlen on 28.06.16.
@@ -8,7 +8,7 @@
 
 import Mapper
 
-struct Object: Mappable {
+struct Movie: Mappable {
     
     let id: String
     let name: String

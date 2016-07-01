@@ -30,7 +30,7 @@ pod install
 open *.xcworkspace
 ```
 
-Next you can open the *.xcworkspace* file and run the application. The demo project inserts a new object and afterwards retrieves all available objects to show them in a tableview. For detailed information on the Swift client have a look at the README of the [SwiftyQLClient](/SwiftyQLClient) folder.
+Next you can open the *.xcworkspace* file and run the application. The demo project inserts a new movie object and afterwards retrieves all available movies to show them in a tableview. For detailed information on the Swift client have a look at the README of the [SwiftyQLClient](/SwiftyQLClient) folder.
 
 ## Contributions
 Contributions are very welcome. Don't be shy and help to improve this project. GraphQL and Swift are both some modern technologies and in my opinion this technology stack can help many people to build better software. If you want to contact me, have ideas for improvement or want to contribute some of your work create an issue and I'll will come back at you as soon as possible.

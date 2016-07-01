@@ -9,25 +9,25 @@ You need to install all dependencies once using `npm install`.
 To start the server you simply run `npm start`. It is hosted on port `8000`.
 
 ## Available methods
-**createObject: Mutation**
+**createMovie: Mutation**
 
-Creates a new object with the given name and returns the object with its name and its id
+Creates a new movie object with the given name and returns the movie with its name and its id
 ```
-mutation createObjectWithName {createObject(name: "test"){name,id}}
+mutation createMovieWithName {createMovie(name: "test"){name,id}}
 ```
 ----
-**allObjects: Query**
+**allMovies: Query**
 
-Returns all objects
+Returns all movies
 ```
-query allObjects {objects{name,id}}
+query allMovies {movies{name,id}}
 ```
 ----
-**objectWithId: Query**
+**movieWithId: Query**
 
-Returns a specific object with a given id
+Returns a specific movie with a given id
 ```
-query objectWithId {object(id: "1"){name,id}}
+query moviewWithId {movie(id: "1"){name,id}}
 ```
 
 

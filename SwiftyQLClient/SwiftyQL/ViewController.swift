@@ -48,15 +48,15 @@ class ViewController: UIViewController {
     }
     
     private func fillInWithSomeTestData() {
-        self.apiProvider.createObjectWithName("Modern technology stack ftw !").subscribeNext { object in
-            print("Create Object with id: \(object.id) and name: \(object.name)")
+        self.apiProvider.createMovieWithName("Inception").subscribeNext { movie in
+            print("Create Movie with id: \(movie.id) and name: \(movie.name)")
         }.addDisposableTo(self.disposeBag)
     }
     
     private func setupTableView() {
         self.tableView.tableFooterView = UIView(frame: .zero)
-        self.apiProvider.allObjects()
-            .bindTo(tableView.rx_itemsWithCellIdentifier("ObjectsTableViewCell",
+        self.apiProvider.allMovies()
+            .bindTo(tableView.rx_itemsWithCellIdentifier("MoviesTableViewCell",
                 cellType: UITableViewCell.self)) { (row, element, cell) in
                     cell.textLabel?.text = element.name
             }

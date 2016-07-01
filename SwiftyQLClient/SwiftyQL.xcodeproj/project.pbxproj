@@ -31,7 +31,7 @@
 		405AF5E01D22A3950064DCC6 /* ReadingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AF5CF1D22A3950064DCC6 /* ReadingRequest.swift */; };
 		405AF5E11D22A3950064DCC6 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AF5D01D22A3950064DCC6 /* APIEndpoint.swift */; };
 		405AF5E21D22A3950064DCC6 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AF5D11D22A3950064DCC6 /* APIProvider.swift */; };
-		405AF5E41D22A6EF0064DCC6 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AF5E31D22A6EF0064DCC6 /* Object.swift */; };
+		405AF5E41D22A6EF0064DCC6 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AF5E31D22A6EF0064DCC6 /* Movie.swift */; };
 		98E36E7E885B22F5A1106FE3 /* Pods_SwiftyQLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2611F5D1ED09AE2778E0BC /* Pods_SwiftyQLTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +75,7 @@
 		405AF5CF1D22A3950064DCC6 /* ReadingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingRequest.swift; sourceTree = "<group>"; };
 		405AF5D01D22A3950064DCC6 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		405AF5D11D22A3950064DCC6 /* APIProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
-		405AF5E31D22A6EF0064DCC6 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		405AF5E31D22A6EF0064DCC6 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4EA62471E55FEECC271675A0 /* Pods-SwiftyQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyQL/Pods-SwiftyQL.debug.xcconfig"; sourceTree = "<group>"; };
 		5F2611F5D1ED09AE2778E0BC /* Pods_SwiftyQLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyQLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8758A8BF2D170B56242D9FB7 /* Pods-SwiftyQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyQL/Pods-SwiftyQL.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 				405AF5BF1D22A3950064DCC6 /* GraphQLicious */,
 				405AF5D01D22A3950064DCC6 /* APIEndpoint.swift */,
 				405AF5D11D22A3950064DCC6 /* APIProvider.swift */,
-				405AF5E31D22A6EF0064DCC6 /* Object.swift */,
+				405AF5E31D22A6EF0064DCC6 /* Movie.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				405AF5D31D22A3950064DCC6 /* Argument.swift in Sources */,
 				405AF5D81D22A3950064DCC6 /* String.swift in Sources */,
 				405AF5DD1D22A3950064DCC6 /* MutatingRequest.swift in Sources */,
-				405AF5E41D22A6EF0064DCC6 /* Object.swift in Sources */,
+				405AF5E41D22A6EF0064DCC6 /* Movie.swift in Sources */,
 				405AF57A1D22A30E0064DCC6 /* ViewController.swift in Sources */,
 				405AF5D51D22A3950064DCC6 /* Fragment.swift in Sources */,
 				405AF5D91D22A3950064DCC6 /* ArgumentValue.swift in Sources */,

@@ -9,26 +9,26 @@
 import Foundation
 
 struct GraphQLBuilder {
-    static func allObjects() -> String {
-        let query = Query(withAlias: "allObjects",
-                          readingRequest: ReadingRequest(name: "objects",
+    static func allMovies() -> String {
+        let query = Query(withAlias: "allMovies",
+                          readingRequest: ReadingRequest(name: "movies",
                             fields: ["name", "id"]))
         return query.create()
     }
     
-    static func object(withId id: String) -> String {
-        let query = Query(withAlias: "objectsWithId",
-                          readingRequest: ReadingRequest(name: "object",
+    static func movie(withId id: String) -> String {
+        let query = Query(withAlias: "movieWithId",
+                          readingRequest: ReadingRequest(name: "movie",
                             arguments:[Argument(key: "id", value: id)],
                             fields: ["name", "id"]))
         return query.create()
     }
     
-    static func createObject(withName objectName: String) -> String {
-        let mutatingRequest = MutatingRequest(mutationName: "createObject",
+    static func createMovie(withName movieName: String) -> String {
+        let mutatingRequest = MutatingRequest(mutationName: "createMovie",
             mutationArgument: Argument(
                 key: "name",
-                value: objectName
+                value: movieName
             ),
             responseFields: [
                 "name",
@@ -37,7 +37,7 @@ struct GraphQLBuilder {
         )
         
         let mutation = Mutation(
-            withAlias: "createObjectWithName",
+            withAlias: "createMovieWithName",
             mutatingRequest: mutatingRequest
         )
         return mutation.create()

@@ -11,9 +11,9 @@ import Moya
 import Alamofire
 
 enum APIEndpoint {
-    case AllObjects
-    case ObjectWithId(id: String)
-    case CreateObjectWithName(name: String)
+    case AllMovies
+    case MovieWithId(id: String)
+    case CreateMovieWithName(name: String)
 }
 
 let graphQLEncodingClosure: (URLRequestConvertible,
@@ -48,12 +48,12 @@ extension APIEndpoint: TargetType {
     
     var parameters: [String: AnyObject]? {
         switch self {
-        case .AllObjects:
-            return ["body": GraphQLBuilder.allObjects()]
-        case .ObjectWithId(let id):
-            return ["body": GraphQLBuilder.object(withId: id)]
-        case .CreateObjectWithName(let name):
-            return ["body": GraphQLBuilder.createObject(withName: name)]
+        case .AllMovies:
+            return ["body": GraphQLBuilder.allMovies()]
+        case .MovieWithId(let id):
+            return ["body": GraphQLBuilder.movie(withId: id)]
+        case .CreateMovieWithName(let name):
+            return ["body": GraphQLBuilder.createMovie(withName: name)]
         }
     }
     
@@ -63,14 +63,14 @@ extension APIEndpoint: TargetType {
     
     var sampleData: NSData {
         switch self {
-        case .AllObjects:
-            return "{\"data\":{\"objects\":[{\"name\":\"My object\",\"id\":\"1\"}]}}"
+        case .AllMovies:
+            return "{\"data\":{\"movies\":[{\"name\":\"Inception\",\"id\":\"1\"}]}}"
                 .dataUsingEncoding(NSUTF8StringEncoding)!
-        case .ObjectWithId(_):
-            return "{\"data\":{\"object\":{\"name\":\"My object\",\"id\":\"1\"}}}"
+        case .MovieWithId(_):
+            return "{\"data\":{\"movie\":{\"name\":\"Inception\",\"id\":\"1\"}}}"
                 .dataUsingEncoding(NSUTF8StringEncoding)!
-        case .CreateObjectWithName(_):
-            return "{\"data\":{\"createObject\":{\"name\":\"My object\",\"id\":\"1\"}}}"
+        case .CreateMovieWithName(_):
+            return "{\"data\":{\"createMovie\":{\"name\":\"Inception\",\"id\":\"1\"}}}"
                 .dataUsingEncoding(NSUTF8StringEncoding)!
         }
     }

@@ -1,26 +1,26 @@
 import { GraphQLObjectType, GraphQLSchema, GraphQLString, GraphQLList } from 'graphql'
-import objectType from './types/object'
+import movieType from './types/movie'
 
-const object = { }
+const movie = { }
 
 export default new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     fields: {
-      // a object with an ID
-      object: {
-        type: objectType,
+      // a movie with an ID
+      movie: {
+        type: movieType,
         args: {
           id: {
             type: GraphQLString
           }
         },
-        resolve: (_, { id }) => object[id]
+        resolve: (_, { id }) => movie[id]
       },
-      // all objects
-      objects: {
-        type: new GraphQLList(objectType),
-        resolve: () => Object.keys(object).map(id => object[id])
+      // all movies
+      movies: {
+        type: new GraphQLList(movieType),
+        resolve: () => Object.keys(movie).map(id => movie[id])
       }
     }
   }),
@@ -28,8 +28,8 @@ export default new GraphQLSchema({
   mutation: new GraphQLObjectType({
     name: 'Mutation',
     fields: {
-      createObject: {
-        type: objectType,
+      createMovie: {
+        type: movieType,
         args: {
           name: {
             name: 'name',
@@ -37,12 +37,12 @@ export default new GraphQLSchema({
           }
         },
         resolve: (_, { name }) => {
-          const obj = {
-            id: Object.keys(object).length + 1,
+          const mov = {
+            id: Object.keys(movie).length + 1,
             name: name
           }
-          object[Object.keys(object).length + 1] = obj
-          return obj
+          movie[Object.keys(movie).length + 1] = mov
+          return mov
         }
       }
     }
