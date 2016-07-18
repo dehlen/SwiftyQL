@@ -1,6 +1,8 @@
 # SwiftyQL
 A sample implementation to talk to a GraphQL Server from Swift.
 
+*If you have any questions about this implementation or have some tips for improvement/enhancement I'd really appreciate if you'd open an issue. I want this repository to be a reference for all kind of implementations concerning Swift and a GraphQL server. So if there is some case you want to implement and can't find guidance in this repository then let me know and I'll try to update this repo as soon as possible.*
+
 This repository contains a GraphQL Server aswell as a Swift client which communicates with this server.
 To run this demo project you should start the server first.
 
